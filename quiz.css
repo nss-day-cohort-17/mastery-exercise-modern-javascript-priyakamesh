@@ -1,3 +1,15 @@
-body {
+#page-setup {
+  margin-top: 10em;
   background-color:  tomato;
+  text-align: center;
+  padding-top: 3em;
+}
+
+.gap {
+  margin-top: 3em;
+  height: 3em;
+}
+
+.card--final {
+  display: none;
 }
