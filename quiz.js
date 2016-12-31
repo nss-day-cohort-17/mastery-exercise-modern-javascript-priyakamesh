@@ -21,11 +21,19 @@ $(".card__link").click(function(e) {
       case "card--final":
         moveAlong = ($("#player-name").val()!== "" && $("#enemy-name").val()!== "");
         break;
+      // case "finalPage":
+      // moveAlong = ($("#player-name").val()!== "" && $("#enemy-name").val()!== "");
+      // break;
       }
       if (moveAlong) {
       $("#page-setup").hide();
       $("." + nextCard).show();
     }
+    // if(moveAlong) {
+    //   var previousCard = $(this).attr("previous");
+    //   $("." +previousCard).hide();
+    //   $("."+nextCard).show();
+    // }
   });
 //when back button is clicked
 $(".card__back").click(function(e) {
@@ -52,13 +60,13 @@ $(".card__link").click( function() {
   playerRobot = new battleDome.Drone(name,playerRobotType,80);
   break;
   case "ASIMO" :
-  playerRobot = new battleDome.Bipedal(name,playerRobotType,60);
-  break;
-  case "PETMAN" :
   playerRobot = new battleDome.Bipedal(name,playerRobotType,100);
   break;
+  case "PETMAN" :
+  playerRobot = new battleDome.Bipedal(name,playerRobotType,110);
+  break;
   case "Dune Buggy" :
-  playerRobot = new battleDome.Atv(name,playerRobotType,110);
+  playerRobot = new battleDome.Atv(name,playerRobotType,130);
   break;
   case "Sand Rail" :
   playerRobot = new battleDome.Atv(name,playerRobotType,150);
@@ -73,7 +81,18 @@ $(".card__link").click( function() {
     case "Yuneec Typhoon H 4K" :
     enemyRobot = new battleDome.Drone(enemyName,enemyRobotType,80);
     break;
-
+    case "ASIMO" :
+    enemyRobot = new battleDome.Bipedal(enemyName,enemyRobotType,100);
+    break;
+    case "PETMAN" :
+    enemyRobot = new battleDome.Bipedal(enemyName,enemyRobotType,110);
+    break;
+    case "Dune Buggy" :
+    enemyRobot = new battleDome.Atv(enemyName,enemyRobotType,130);
+    break;
+    case "Sand Rail" :
+    enemyRobot = new battleDome.Atv(enemyName,enemyRobotType,150);
+    break;
 
   }
   $(".nameCard2").html(`<div><h3>Enemy Name : ${enemyRobot.name}</h3> <h4>${enemyRobot.type}</h4><h4>Health :${enemyRobot.health}</div>`)
@@ -89,7 +108,18 @@ $("#attackButton").click(function(){
     case "Yuneec Typhoon H 4K" :
     damage = 1 + (Math.floor(Math.random() * 3 + 1) + 1);
     break;
-
+    case "ASIMO" :
+    damage = Math.floor(Math.random() * 3 + 1) + 2;
+    break;
+    case "PETMAN" :
+    damage = 1 + (Math.floor(Math.random() * 3 + 1) + 2);
+    break;
+    case "Dune Buggy" :
+    damage = Math.floor(Math.random() * 3 + 1) + 3;
+    break;
+    case "Sand Rail" :
+    damage = 1 + (Math.floor(Math.random() * 3 + 1) + 3);
+    break;
 }
 playerRobot.health = playerRobot.health - damage
 $(".nameCard1").html(`<div><h3>Player Name : ${playerRobot.name}</h3> <h4>${playerRobot.type}</h4><h4>Health :${playerRobot.health}</div>`)
@@ -100,13 +130,28 @@ switch (enemyRobot.type) {
     case "Yuneec Typhoon H 4K" :
     damage = 1 + (Math.floor(Math.random() * 3 + 1) + 1);
     break;
-
+    case "ASIMO" :
+    damage = Math.floor(Math.random() * 3 + 1) + 2;
+    break;
+    case "PETMAN" :
+    damage = 1 + (Math.floor(Math.random() * 3 + 1) + 2);
+    break;
+    case "Dune Buggy" :
+    damage = Math.floor(Math.random() * 3 + 1) + 3;
+    break;
+    case "Sand Rail" :
+    damage = 1 + (Math.floor(Math.random() * 3 + 1) + 3);
+    break;
 }
 enemyRobot.health = enemyRobot.health - damage
 $(".nameCard2").html(`<div><h3>Enemy Name : ${enemyRobot.name}</h3> <h4>${enemyRobot.type}</h4><h4>Health :${enemyRobot.health}</div>`)
 if (playerRobot.health < 0 || enemyRobot.health < 0) {
   if (playerRobot.health < 0) {
-    $(".card--final").html(`<div> ${playerRobot.name} lost the game`);
-  } else ($(".card--final").html(`<div>${playerRobot.name} won the game`))
+    $(".card--final").html(`<div class="lostPage">you lost</div>`);
+
+  } else {
+
+  $(".card--final").html(`<div class="winPage>you won</div>`)
+}
 }
 })
