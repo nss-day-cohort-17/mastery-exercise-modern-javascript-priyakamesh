@@ -53,45 +53,45 @@ $(".card__link").click( function() {
 
   switch (playerRobotType) {
   case "DJI Phantom 4" :
-  playerRobot = new battleDome.Drone(name,playerRobotType,50);
+  playerRobot = new battleDome.Drone.Dji(name,playerRobotType,50);
   break;
 
   case "Yuneec Typhoon H 4K" :
-  playerRobot = new battleDome.Drone(name,playerRobotType,80);
+  playerRobot = new battleDome.Drone.Yun(name,playerRobotType,80);
   break;
   case "ASIMO" :
-  playerRobot = new battleDome.Bipedal(name,playerRobotType,100);
+  playerRobot = new battleDome.Bipedal.Asimo(name,playerRobotType,100);
   break;
   case "PETMAN" :
-  playerRobot = new battleDome.Bipedal(name,playerRobotType,110);
+  playerRobot = new battleDome.Bipedal.Petman(name,playerRobotType,110);
   break;
   case "Dune Buggy" :
-  playerRobot = new battleDome.Atv(name,playerRobotType,130);
+  playerRobot = new battleDome.Atv.Dune(name,playerRobotType,130);
   break;
   case "Sand Rail" :
-  playerRobot = new battleDome.Atv(name,playerRobotType,150);
+  playerRobot = new battleDome.Atv.Sand(name,playerRobotType,150);
   break;
 
   }
   $(".nameCard1").html(`<div><h3>Player Name : ${playerRobot.name}</h3> <h4>${playerRobot.type}</h4><h4>Health :${playerRobot.health}</div>`)
   switch (enemyRobotType) {
     case "DJI Phantom 4" :
-    enemyRobot = new battleDome.Drone(enemyName,enemyRobotType,50);
+    enemyRobot = new battleDome.Drone.Dji(enemyName,enemyRobotType,50);
     break;
     case "Yuneec Typhoon H 4K" :
-    enemyRobot = new battleDome.Drone(enemyName,enemyRobotType,80);
+    enemyRobot = new battleDome.Drone.Yun(enemyName,enemyRobotType,80);
     break;
     case "ASIMO" :
-    enemyRobot = new battleDome.Bipedal(enemyName,enemyRobotType,100);
+    enemyRobot = new battleDome.Bipedal.Asimo(enemyName,enemyRobotType,100);
     break;
     case "PETMAN" :
-    enemyRobot = new battleDome.Bipedal(enemyName,enemyRobotType,110);
+    enemyRobot = new battleDome.Bipedal.Petman(enemyName,enemyRobotType,110);
     break;
     case "Dune Buggy" :
-    enemyRobot = new battleDome.Atv(enemyName,enemyRobotType,130);
+    enemyRobot = new battleDome.Atv.Dune(enemyName,enemyRobotType,130);
     break;
     case "Sand Rail" :
-    enemyRobot = new battleDome.Atv(enemyName,enemyRobotType,150);
+    enemyRobot = new battleDome.Atv.Sand(enemyName,enemyRobotType,150);
     break;
 
   }
