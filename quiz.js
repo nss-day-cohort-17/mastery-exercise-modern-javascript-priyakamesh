@@ -10,7 +10,7 @@ var enemyRobot;
 //Initial page setup
 
 $("#page-setup").show()
-$(".player-name").focus();
+$("#player-name").focus();
 //when the continue button clicked move on to next card
 $(".card__link").click(function(e) {
     var nextCard = $(this).attr("next");
@@ -122,7 +122,7 @@ $("#attackButton").click(function(){
     break;
 }
 playerRobot.health = playerRobot.health - damage
-$(".nameCard1").html(`<div><h3>Player Name : ${playerRobot.name}</h3> <h4>${playerRobot.type}</h4><h4>Health :${playerRobot.health}</div>`)
+$(".nameCard1").html(`<div><h3>Player Name : ${playerRobot.name}</h3> <h4>${playerRobot.type}</h4><h4 class="progressbar ui-progressbar-value">Health :${playerRobot.health}</h4></div>`)
 switch (enemyRobot.type) {
   case "DJI Phantom 4" :
     damage = Math.floor(Math.random() * 3 + 1) + 1;
@@ -144,14 +144,14 @@ switch (enemyRobot.type) {
     break;
 }
 enemyRobot.health = enemyRobot.health - damage
-$(".nameCard2").html(`<div><h3>Enemy Name : ${enemyRobot.name}</h3> <h4>${enemyRobot.type}</h4><h4>Health :${enemyRobot.health}</div>`)
+$(".nameCard2").html(`<div><h3>Enemy Name : ${enemyRobot.name}</h3> <h4>${enemyRobot.type}</h4><h4 class="progressbar ui-progressbar-value">Health :${enemyRobot.health}</h4></div>`)
 if (playerRobot.health < 0 || enemyRobot.health < 0) {
   if (playerRobot.health < 0) {
-    $(".card--final").html(`<div class="lostPage">you lost</div>`);
+    $(".card--final").html(`<div class="lostPage ">The ${enemyRobot.type} ${enemyRobot.property} defeated ${playerRobot.type} ${playerRobot.property} with ${enemyRobot.weapon}</div>`);
 
   } else {
 
-  $(".card--final").html(`<div class="winPage>you won</div>`)
+  $(".card--final").html(`<div class="winPage>The ${playerRobot.type} ${playerRobot.property} defeated ${enemyRobot.type} ${enemyRobot.property} with ${playerRobot.weapon}</div>`)
 }
 }
 })

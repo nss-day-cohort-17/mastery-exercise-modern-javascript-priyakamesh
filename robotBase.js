@@ -11,6 +11,7 @@ battleDome.robot = function() {
 battleDome.Drone = function () {
   this.mode= "Aerial";
   this.health = this.health +10;
+  this.property = "Drone";
 }
 battleDome.Drone.prototype = new battleDome.robot()
 
@@ -19,6 +20,7 @@ battleDome.Drone.prototype = new battleDome.robot()
 battleDome.Bipedal = function () {
   this.mode = "Ground";
   this.health = this.health  + 15;
+  this.property = "Bipedal";
 }
 battleDome.Bipedal.prototype = new battleDome.robot();
 
@@ -26,5 +28,6 @@ battleDome.Bipedal.prototype = new battleDome.robot();
 battleDome.Atv =function () {
   this.mode = "Aerial and Ground";
   this.health = this.health  + 20;
+  this.property = "Atv";
 }
 battleDome.Atv.prototype = new battleDome.robot();

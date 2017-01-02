@@ -14,14 +14,21 @@
   display: none;
 }
 
-/*.winPage {
-  background-image: url("http://i484.photobucket.com/albums/rr205/matty2361/You%20Won%20Tags/youwon.gif")
-  background-repeat : no-repeat;
-
+.winPage {
+  background-image: url("http://i484.photobucket.com/albums/rr205/matty2361/You%20Won%20Tags/youwon.gif");
 }
 
 .lostPage {
-  background-image: url("http://knoxvillewatertreatment.com/wp-content/uploads/2016/10/Sorry-You-lost.gif")
-  background-repeat : no-repeat;
+  background-image: url("http://knoxvillewatertreatment.com/wp-content/uploads/2016/10/Sorry-You-lost.gif");
+}
 
-}*/
+input {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+  border : 2px solid red;
+  margin-top : 20px;
+  margin-bottom: 40px;
+}
