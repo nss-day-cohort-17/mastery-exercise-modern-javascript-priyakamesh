@@ -147,11 +147,13 @@ enemyRobot.health = enemyRobot.health - damage
 $(".nameCard2").html(`<div><h3>Enemy Name : ${enemyRobot.name}</h3> <h4>${enemyRobot.type}</h4><h4 class="progressbar ui-progressbar-value">Health :${enemyRobot.health}</h4></div>`)
 if (playerRobot.health < 0 || enemyRobot.health < 0) {
   if (playerRobot.health < 0) {
-    $(".card--final").html(`<div class="lostPage ">The ${enemyRobot.type} ${enemyRobot.property} defeated ${playerRobot.type} ${playerRobot.property} with ${enemyRobot.weapon}</div>`);
+    $(".card--final").html(`<div class="lostPage">The ${enemyRobot.type} ${enemyRobot.property} defeated ${playerRobot.type} ${playerRobot.property} with ${enemyRobot.weapon}</div>
+                            <img src = "http://knoxvillewatertreatment.com/wp-content/uploads/2016/10/Sorry-You-lost.gif" alt="you lost">`);
 
   } else {
 
-  $(".card--final").html(`<div class="winPage>The ${playerRobot.type} ${playerRobot.property} defeated ${enemyRobot.type} ${enemyRobot.property} with ${playerRobot.weapon}</div>`)
+  $(".card--final").html(`<div class="winPage">The ${playerRobot.type} ${playerRobot.property} defeated ${enemyRobot.type} ${enemyRobot.property} with ${playerRobot.weapon}</div>
+                          <img src= "http://i484.photobucket.com/albums/rr205/matty2361/You%20Won%20Tags/youwon.gif" alt="you won">`)
 }
 }
 })
