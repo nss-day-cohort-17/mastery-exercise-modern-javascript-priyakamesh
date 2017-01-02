@@ -1,0 +1,39 @@
+#page-setup {
+  margin-top: 10em;
+  background-color:  tomato;
+  text-align: center;
+  padding-top: 3em;
+}
+
+.gap {
+  margin-top: 3em;
+  height: 3em;
+}
+
+.card--final {
+  display: none;
+}
+
+.winPage {
+  /*background-image: url("http://i484.photobucket.com/albums/rr205/matty2361/You%20Won%20Tags/youwon.gif")*/
+  border : 2px solid green;
+
+
+}
+
+.lostPage {
+  /*background-image: url("http://knoxvillewatertreatment.com/wp-content/uploads/2016/10/Sorry-You-lost.gif")*/
+  border : 2px solid red;
+
+}
+
+input {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+  border : 2px solid red;
+  margin-top : 20px;
+  margin-bottom: 40px;
+}

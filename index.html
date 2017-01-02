@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Robot Battledome</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <article>
+    <div class="container">
+      <section class="card--name" id="page-setup">
+        <h1>Robot Battledome</h1>
+        <div class="container-fluid">
+          <div class="col-md-3 col-sm-5 gap ">Enter your Name
+            <input type="text" id="player-name" >
+          </div>
+          <div  class="col-md-3 col-sm-5 col-md-offset-5 gap" >Enter your Enemy Name
+            <input type="text" id="enemy-name">
+          </div>
+            <select class="col-md-3 col-sm-4 gap" id="target1">
+              <option>Your Favorite Robot</option>
+              <optgroup label="DRONE">
+                <option>DJI Phantom 4</option>
+                <option>Yuneec Typhoon H 4K</option>
+              </optgroup>
+
+              <optgroup label="BI-PEDAL">
+                <option>ASIMO</option>
+                <option>PETMAN</option>
+              </optgroup>
+              <optgroup label="ATV">
+                <option>Dune Buggy</option>
+                <option>Sand Rail</option>
+              </optgroup>
+            </select>
+            <select class="col-md-3 col-sm-offset-1 col-md-offset-5 gap" id="target2">
+              <option>Your Favorite Robot</option>
+              <optgroup label="DRONE">
+                <option>DJI Phantom 4</option>
+                <option>Yuneec Typhoon H 4K</option>
+              </optgroup>
+
+              <optgroup label="BI-PEDAL">
+                <option>ASIMO</option>
+                <option>PETMAN</option>
+              </optgroup>
+              <optgroup label="ATV">
+                <option>Dune Buggy</option>
+                <option>Sand Rail</option>
+              </optgroup>
+              </select>
+              <div>
+                <a class="card__link col-md-12" href="#" next="card--final">
+                  <button class="btn btn-primary">Continue</button>
+                </a>
+              </div>
+          </div> <!-- end container-fluid -->
+        </section>
+
+        <section class=" card--final">
+          <div>
+
+
+            <a class="card__back"
+               href="#"
+               previous="card--name">
+              <!-- <span class="btn__prompt">&lt;</span> -->
+              <span class="btn btn-primary col-md-3 col-md-offset-5 ">Back</span>
+            </a>
+          </div>
+          <div class="nameCard1 col-md-12 center">
+          </div>
+
+            <div id="attackButton" class="card__button">
+                <a
+                   href="#"
+                   next="finalPage">
+                  <span class="btn__prompt"></span>
+                  <span class="btn btn-primary col-md-3 col-md-offset-5"> Attack enemy!</span>
+                </a>
+              </div>
+          <div class="nameCard2 col-md-12 center ">
+          </div>
+
+        </section>
+
+    </div> <!-- end container -->
+
+  </article>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="robotBase.js"></script>
+<script type="text/javascript" src="robotModel.js"></script>
+<script type="text/javascript" src="quiz.js"></script>
+</body>
+</html>
